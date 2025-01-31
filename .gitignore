@@ -1,0 +1,14 @@
+# Ignorar ambiente virtual
+venv/
+pyspark-env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar arquivos temporários do Jupyter
+.ipynb_checkpoints/
+
+# Ignorar dependências geradas
+*.log
+*.sqlite
