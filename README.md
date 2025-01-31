@@ -21,9 +21,12 @@ Este repositório tem como objetivo fornecer um guia completo e prático sobre o
 - O que é PySpark?
   - PySpark é a API em Python do Apache Spark, um framework de processamento de dados distribuídos projetado para grandes volumes de informações. Ele permite criar aplicações escaláveis para processamento de dados em clusters. Para mais detalhes, consulte [O que é PySpark?](docs/what_is_pyspark.md).
 - Instalação e configuração no VSCode
-- Configuração de ambiente local (Standalone, Docker, Databricks)
+- Configuração de ambiente local: Standalone, Docker e Databricks.
+  - Para um guia detalhado sobre a Configuração do PySpark em Modo [Standalone](docs/setup_standalone.md).
+  - Para um guia detalhado sobre a Configuração do PySpark com [Docker](docs/setup_docker.md).
+  - Para um guia detalhado sobre a Configuração do PySpark no [Databricks](docs/setup_databricks.md).
 - Comparação: Pandas vs PySpark
-  - Para um guia detalhado sobre as diferenças entre Pandas e PySpark, veja [Pandas vs PySpark](docs/pyspark_vs_pandas.md).
+  - Para um guia detalhado sobre as diferenças, veja [Pandas vs PySpark](docs/pyspark_vs_pandas.md).
 
 ### 2️⃣ Fundamentos do PySpark
 - Estrutura do **SparkSession** e **RDD**
