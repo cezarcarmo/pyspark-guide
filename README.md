@@ -34,30 +34,50 @@ Este repositório tem como objetivo fornecer um guia completo e prático sobre o
 - Transformações e Ações no PySpark
 - Partições e otimização de performance
 
-### 3️⃣ Spark SQL e Manipulação de Dados
+### 3️⃣ Transformações e Ações em DataFrames
+- **Transformações:**
+  - Adicionar colunas com `withColumn`.
+  - Remover colunas com `drop`.
+  - Selecionar valores únicos com `distinct`.
+  - Renomear colunas.
+- **Ações:**
+  - Contar registros com `count`.
+  - Coletar dados localmente com `collect`.
+  - Exibir registros com `show` e `take`.
+
+### 4️⃣ Funções Avançadas em DataFrames
+- **Agrupamento e Agregações:**
+  - Agrupar dados com `groupBy`.
+  - Aplicar funções de agregação como `sum`, `avg`, e `max`.
+- **Joins:**
+  - Combinar DataFrames com diferentes tipos de joins (`inner`, `left`, `right`, `outer`).
+- **UDFs (User Defined Functions):**
+  - Criar e aplicar funções personalizadas para manipular colunas de DataFrames.
+
+### 5️⃣ Spark SQL e Manipulação de Dados
 - Criando e manipulando tabelas com Spark SQL
 - Filtragem, Joins e Agregações
 - Funções embutidas no PySpark SQL
 - Criando funções UDFs no PySpark
 
-### 4️⃣ ETL com PySpark
+### 6️⃣ ETL com PySpark
 - Lendo dados de diferentes fontes (**CSV, Parquet, JSON, JDBC, Delta Lake**)
 - Escrevendo dados em diferentes formatos e destinos
 - Transformações e tratamentos de dados
 - Pipeline ETL completo com PySpark
 
-### 5️⃣ Otimização e Performance
+### 7️⃣ Otimização e Performance
 - Gerenciamento de Partições
 - Broadcast Joins e Cache
 - Uso de Catalyst Optimizer
 - Melhores práticas para performance em PySpark
 
-### 6️⃣ Integração com Cloud (AWS, GCP, Azure)
+### 8️⃣ Integração com Cloud (AWS, GCP, Azure)
 - Executando PySpark na AWS Glue
 - Rodando PySpark no Databricks
 - Integração com **S3, BigQuery, ADLS**
 
-### 7️⃣ Casos Práticos de Engenharia de Dados
+### 9️⃣ Casos Práticos de Engenharia de Dados
 - Pipeline de processamento de logs
 - Análise de dados de e-commerce
 - Processamento de grandes volumes de dados com PySpark
@@ -81,11 +101,26 @@ Este repositório tem como objetivo fornecer um guia completo e prático sobre o
    ```bash
    pip install -r requirements.txt
    ```
-3. Execute um dos notebooks para explorar os exemplos práticos.
+3. Execute os scripts localizados no diretório `scripts/`:
+   ```bash
+   python scripts/<nome_do_script>.py
+   ```
+4. Exemplos disponíveis:
+   - **RDDs e DataFrames:**
+     ```bash
+     python scripts/rdd_example.py
+     ```
+   - **Transformações e Ações:**
+     ```bash
+     python scripts/dataframe_transformacoes_acoes_script.py
+     ```
+   - **Funções Avançadas:**
+     ```bash
+     python scripts/dataframe_funcoes_avancadas_script.py
+     ```
 
 ## 📌 Contribuição
 Fique à vontade para abrir **issues** e **pull requests** para melhorias no projeto.
 
 ## 📄 Licença
 Este projeto está sob a licença MIT.
-
