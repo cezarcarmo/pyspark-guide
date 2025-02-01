@@ -55,10 +55,11 @@ Este repositório tem como objetivo fornecer um guia completo e prático sobre o
   - Criar e aplicar funções personalizadas para manipular colunas de DataFrames.
 
 ### 5️⃣ Spark SQL e Manipulação de Dados
-- Criando e manipulando tabelas com Spark SQL
-- Filtragem, Joins e Agregações
-- Funções embutidas no PySpark SQL
-- Criando funções UDFs no PySpark
+- Criando e manipulando tabelas temporárias no Spark SQL
+- Filtragem, Joins e Agregações com SQL
+- Uso de funções SQL embutidas no PySpark
+- Criando e utilizando funções UDFs dentro do SQL
+  - Para mais detalhes, veja [Spark SQL e Manipulação de Dados](docs/spark_sql_manipulacao_dados.md).
 
 ### 6️⃣ ETL com PySpark
 - Lendo dados de diferentes fontes (**CSV, Parquet, JSON, JDBC, Delta Lake**)
@@ -117,6 +118,10 @@ Este repositório tem como objetivo fornecer um guia completo e prático sobre o
    - **Funções Avançadas:**
      ```bash
      python scripts/dataframe_funcoes_avancadas_script.py
+     ```
+   - **Spark SQL e Manipulação de Dados:**
+     ```bash
+     python scripts/spark_sql_manipulacao_dados_script.py
      ```
 
 ## 📌 Contribuição
