@@ -12,3 +12,6 @@ __pycache__/
 # Ignorar dependências geradas
 *.log
 *.sqlite
+
+# Ignore Miniconda installer
+miniconda.sh
