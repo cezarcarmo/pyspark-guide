@@ -1,9 +1,4 @@
 from pyspark.sql import SparkSession
-import os
-
-# Forçar o Spark a usar o interpretador correto
-os.environ["PYSPARK_PYTHON"] = "C:\\Users\\cezar\\anaconda3\\envs\\pyspark-env\\python.exe"
-os.environ["PYSPARK_DRIVER_PYTHON"] = "C:\\Users\\cezar\\anaconda3\\envs\\pyspark-env\\python.exe"
 
 # Criar SparkSession
 spark = SparkSession.builder.appName("RDDExample").getOrCreate()
@@ -28,7 +23,7 @@ soma = rdd.reduce(lambda x, y: x + y)
 print("Soma dos elementos do RDD:", soma)
 
 # Criando um RDD a partir de um arquivo de texto
-rdd_from_file = sc.textFile("data/exemplo.csv")
+rdd_from_file = sc.textFile("/home/cezarcarmo/repos/pyspark-guide/data/exemplo.csv")
 print("Primeiras linhas do RDD:", rdd_from_file.take(5))
 
 # Definindo número de partições

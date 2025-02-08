@@ -1,24 +1,24 @@
 from pyspark.sql import SparkSession
 
-# Criar uma SparkSession
-spark = SparkSession.builder \
-    .appName("ExemploPySpark") \
-    .getOrCreate()
+def create_spark_session(app_name="pyspark-guide", master="local[*]"):
+    """
+    Cria uma SparkSession com as configurações especificadas.
 
-# Exemplo: Criar um DataFrame a partir de um arquivo CSV
-file_path = "data/exemplo.csv"
+    Args:
+        app_name (str): Nome do aplicativo Spark.
+        master (str): URL do master do Spark (e.g., "local[*]", "spark://master:7077").
 
-# Criar DataFrame
-df = spark.read.csv(file_path, header=True, inferSchema=True)
+    Returns:
+        SparkSession: A SparkSession criada.
+    """
+    spark = SparkSession.builder \
+      .appName(app_name) \
+      .master(master) \
+      .getOrCreate()
+    return spark
 
-# Mostrar as primeiras linhas
-print("Exibindo as 5 primeiras linhas do DataFrame:")
-df.show(5)
-
-# Exibir o esquema do DataFrame
-print("Esquema do DataFrame:")
-df.printSchema()
-
-# Encerrar a SparkSession
-spark.stop()
+if __name__ == "__main__":
+    spark = create_spark_session()
+    print(f"Versão do Spark: {spark.version}")
+    spark.stop()
 

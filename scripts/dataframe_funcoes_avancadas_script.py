@@ -1,11 +1,6 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import avg, sum, max, udf
 from pyspark.sql.types import StringType
-import os
-
-# Forçar o Spark a usar o interpretador correto
-os.environ["PYSPARK_PYTHON"] = "C:\\Users\\cezar\\anaconda3\\envs\\pyspark-env\\python.exe"
-os.environ["PYSPARK_DRIVER_PYTHON"] = "C:\\Users\\cezar\\anaconda3\\envs\\pyspark-env\\python.exe"
 
 # Criar SparkSession
 spark = SparkSession.builder.appName("FuncoesAvancadas").getOrCreate()

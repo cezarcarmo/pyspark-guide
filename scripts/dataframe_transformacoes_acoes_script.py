@@ -7,12 +7,8 @@ os.makedirs("data", exist_ok=True)
 
 # Criar arquivo CSV de exemplo
 csv_content = "id,nome,idade\n1,Ana,25\n2,Carlos,30\n3,João,45\n4,Mariana,35\n"
-with open("data/exemplo_transformacoes_acoes.csv", "w") as f:
+with open("/home/cezarcarmo/repos/pyspark-guide/data/exemplo_transformacoes_acoes.csv", "w") as f:
     f.write(csv_content)
-    
-# Forçar o Spark a usar o interpretador correto
-os.environ["PYSPARK_PYTHON"] = "C:\\Users\\cezar\\anaconda3\\envs\\pyspark-env\\python.exe"
-os.environ["PYSPARK_DRIVER_PYTHON"] = "C:\\Users\\cezar\\anaconda3\\envs\\pyspark-env\\python.exe"
 
 # Iniciar SparkSession
 spark = SparkSession.builder.appName("DataFrameTransformacoesAcoes").getOrCreate()
@@ -69,5 +65,5 @@ print(df.take(3))
 
 # Ler arquivo CSV
 print("### Lendo arquivo CSV ###")
-df_csv = spark.read.csv("data/exemplo_transformacoes_acoes.csv", header=True, inferSchema=True)
+df_csv = spark.read.csv("/home/cezarcarmo/repos/pyspark-guide/data/exemplo_transformacoes_acoes.csv", header=True, inferSchema=True)
 df_csv.show()
