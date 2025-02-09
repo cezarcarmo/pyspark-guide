@@ -1,3 +1,7 @@
 pyspark==3.4.0
 jupyter
 findspark
+pandas
+matplotlib
+seaborn
+pytest

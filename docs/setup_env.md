@@ -5,12 +5,10 @@ Este documento detalha os passos para configurar um ambiente de desenvolvimento 
 ## 🔥 Criando o Ambiente Virtual com Miniconda
 
 1. **Baixar e instalar o Miniconda**:
-
-```bash
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
-bash miniconda.sh -b -p $HOME/miniconda
-export PATH="$HOME/miniconda/bin:$PATH"
-```
+   ```bash
+   wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+   bash miniconda.sh -b -p $HOME/miniconda
+   export PATH="$HOME/miniconda/bin:$PATH"
 
 2. **Criar um ambiente Conda chamado ``pyspark-env``**:
 
@@ -96,112 +94,6 @@ source ~/.bashrc
 ```bash
 export SPARK_LOCAL_IP=192.168.138.128
 ```
-
-6. **Vamos atualizar o arquivo setup_env.md com as instruções corrigidas.
-
-### Atualização do setup_env.md
-
-```markdown
-# Configuração do Ambiente PySpark
-
-Este documento detalha os passos para configurar um ambiente de desenvolvimento PySpark utilizando **Miniconda**.
-
-## 🔥 Criando o Ambiente Virtual com Miniconda
-
-1. **Baixar e instalar o Miniconda**:
-   ```bash
-   wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
-   bash miniconda.sh -b -p $HOME/miniconda
-   export PATH="$HOME/miniconda/bin:$PATH"
-   ```
-
-2. **Criar um ambiente Conda chamado `pyspark-env`**:
-   ```bash
-   conda create --name pyspark-env python=3.8
-   ```
-
-3. **Ativar o ambiente**:
-   ```bash
-   conda activate pyspark-env
-   ```
-
-4. **Instalar as dependências**:
-   ```bash
-   conda install -c conda-forge pyspark jupyter findspark
-   ```
-
-## 🖥 Configuração do Java
-
-1. **Instalar o Java**:
-   ```bash
-   sudo apt update
-   sudo apt install openjdk-11-jdk
-   ```
-
-2. **Configurar a variável `JAVA_HOME`**:
-   ```bash
-   export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
-   export PATH=$JAVA_HOME/bin:$PATH
-   ```
-
-   Adicione essas linhas ao seu arquivo de configuração de shell (`~/.bashrc`, `~/.zshrc`, etc.):
-
-   ```bash
-   echo 'export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64' >> ~/.bashrc
-   echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.bashrc
-   source ~/.bashrc
-   ```
-
-3. **Verificar a configuração**:
-   ```bash
-   echo $JAVA_HOME
-   java -version
-   ```
-
-## 🖥 Configuração do Spark
-
-1. **Instalar o PySpark**:
-   ```bash
-   conda install -c conda-forge pyspark
-   ```
-
-2. **Configurar a variável `SPARK_HOME`**:
-   ```bash
-   which pyspark
-   ```
-
-   Use o caminho retornado pelo comando `which pyspark` para definir a variável `SPARK_HOME`. Por exemplo, se o caminho retornado for `/home/cezarcarmo/miniconda3/envs/pyspark-env/bin/pyspark`, defina `SPARK_HOME` como `/home/cezarcarmo/miniconda3/envs/pyspark-env`.
-
-   ```bash
-   export SPARK_HOME=/home/cezarcarmo/miniconda3/envs/pyspark-env
-   export PATH=$SPARK_HOME/bin:$PATH
-   ```
-
-   Adicione essas linhas ao seu arquivo de configuração de shell:
-
-   ```bash
-   echo 'export SPARK_HOME=/home/cezarcarmo/miniconda3/envs/pyspark-env' >> ~/.bashrc
-   echo 'export PATH=$SPARK_HOME/bin:$PATH' >> ~/.bashrc
-   source ~/.bashrc
-   ```
-
-3. **Configurar a variável `SPARK_LOCAL_IP`**:
-   ```bash
-   export SPARK_LOCAL_IP=192.168.138.128
-   ```
-
-   Adicione essa linha ao seu arquivo de configuração de shell:
-
-   ```bash
-   echo 'export SPARK_LOCAL_IP=192.168.138.128' >> ~/.bashrc
-   source ~/.bashrc
-   ```
-
-4. **Verificar a configuração**:
-   ```bash
-   echo $SPARK_HOME
-   echo $SPARK_LOCAL_IP
-   ```
 
 ## 🖥 Configuração no VSCode
 

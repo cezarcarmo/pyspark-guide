@@ -65,7 +65,7 @@ Este repositório tem como objetivo fornecer um guia completo e prático sobre o
 - Lendo dados de diferentes fontes (**CSV, Parquet, JSON, JDBC, Delta Lake**)
 - Escrevendo dados em diferentes formatos e destinos
 - Transformações e tratamentos de dados
-- Pipeline ETL completo com PySpark
+  - Para mais detalhes, veja [ETL com PySpark](docs/etl_pyspark.md).
 
 ### 7️⃣ Otimização e Performance
 - Gerenciamento de Partições
