@@ -71,7 +71,8 @@ Este repositório tem como objetivo fornecer um guia completo e prático sobre o
 - Gerenciamento de Partições
 - Broadcast Joins e Cache
 - Uso de Catalyst Optimizer
-- Melhores práticas para performance em PySpark
+- Melhores práticas para performance em PySpark 
+  - Para mais detalhes, veja [Otimizacao com PySpark](docs/pyspark_optimization.md).
 
 ### 8️⃣ Integração com Cloud (AWS, GCP, Azure)
 - Executando PySpark na AWS Glue
