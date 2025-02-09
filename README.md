@@ -99,31 +99,7 @@ Este repositório tem como objetivo fornecer um guia completo e prático sobre o
    git clone https://github.com/seu-usuario/pyspark-guide.git
    cd pyspark-guide
    ```
-2. Instale as dependências:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Execute os scripts localizados no diretório `scripts/`:
-   ```bash
-   python scripts/<nome_do_script>.py
-   ```
-4. Exemplos disponíveis:
-   - **RDDs e DataFrames:**
-     ```bash
-     python scripts/rdd_example.py
-     ```
-   - **Transformações e Ações:**
-     ```bash
-     python scripts/dataframe_transformacoes_acoes_script.py
-     ```
-   - **Funções Avançadas:**
-     ```bash
-     python scripts/dataframe_funcoes_avancadas_script.py
-     ```
-   - **Spark SQL e Manipulação de Dados:**
-     ```bash
-     python scripts/spark_sql_manipulacao_dados_script.py
-     ```
+2. Siga as [Docs](docs) (Atente-se ao setup_env.md)
 
 ## 📌 Contribuição
 Fique à vontade para abrir **issues** e **pull requests** para melhorias no projeto.
